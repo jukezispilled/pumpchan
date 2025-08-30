@@ -31,7 +31,7 @@ export default async function HomePage() {
   const contractAddress = "dogbonk";
 
   return (
-    <div className="max-w-4xl mx-auto p-4 min-h-screen flex flex-col">
+    <div className="max-w-4xl mx-auto p-4 mt-8 md:mt-12 min-h-screen flex flex-col">
       {/* Top left area with X link and contract address */}
       <div className="flex justify-between items-start mb-4 absolute top-4 right-4">
         <div className="flex items-center gap-1">
@@ -61,6 +61,10 @@ export default async function HomePage() {
           }}
           priority
         />
+      </div>
+
+      <div className='flex justify-center mb-[5%]'>
+        <img src="/headr.png" className='size-[50%] border' />
       </div>
 
       <div className="bg-[#fff0c5] border-1 border-orange-700 h-min">
