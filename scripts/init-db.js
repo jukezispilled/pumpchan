@@ -10,24 +10,24 @@ import { createBoard } from '../src/lib/db-operations.js';
 const boards = [
   {
     code: 'a',
-    name: 'Pump',
-    description: 'Pump.fun Discourse',
+    name: 'Bonk',
+    description: 'Bonk Chat',
     isNSFW: false,
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
   },
   {
     code: 'b',
-    name: 'Majors',
-    description: 'Major Crypto',
-    isNSFW: false,
+    name: 'Waifu',
+    description: 'Hot Waifus',
+    isNSFW: true,
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
   },
   {
     code: 'c',
-    name: 'ALTs',
-    description: 'Alt Cryptos',
+    name: 'Useless',
+    description: 'Useless Board',
     isNSFW: false,
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
@@ -35,7 +35,7 @@ const boards = [
   {
     code: 'd',
     name: 'Memes',
-    description: 'Meme Discourse',
+    description: 'Meme Share',
     isNSFW: false,
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
@@ -73,14 +73,6 @@ const boards = [
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
   },
   {
-    code: 'i',
-    name: 'Ruggers',
-    description: 'Mf Ruggers',
-    isNSFW: false,
-    maxFileSize: 5 * 1024 * 1024,
-    allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
-  },
-  {
     code: 'j',
     name: 'FUD',
     description: 'Fear, Uncertainty, Doubt',
@@ -91,7 +83,7 @@ const boards = [
   {
     code: 'k',
     name: 'NFTs',
-    description: 'Non-Fungible Tokens',
+    description: 'Non-Fungible Tek',
     isNSFW: false,
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
@@ -160,22 +152,7 @@ const boards = [
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
   },
-  {
-    code: 't',
-    name: 'Cryptohoes',
-    description: 'Crypto thotties',
-    isNSFW: true,
-    maxFileSize: 5 * 1024 * 1024,
-    allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
-  },
-  {
-    code: 'u',
-    name: 'Chillhouse',
-    description: 'Just a Chillhouse',
-    isNSFW: true,
-    maxFileSize: 5 * 1024 * 1024,
-    allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
-  },
+
 ];
 
 async function initializeDatabase() {

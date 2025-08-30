@@ -90,9 +90,9 @@ export default function BoardPage({ params }) {
     return (
       <div className="flex items-center justify-center h-screen">
         <img
-          src="/logo.png"
+          src="/load.gif"
           alt="Loading..."
-          className="w-24 h-24 animate-spin"
+          className="w-24 h-24"
         />
       </div>
     );

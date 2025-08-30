@@ -74,13 +74,9 @@ export default async function HomePage() {
               href={`/${board.code}`}
               className="block p-1 bg-white border-1 border-orange-700 hover:bg-gray-50 transition-colors relative"
             >
-              <div className="font-bold text-blue-600">/{board.code}/</div>
+              <div className="font-bold text-blue-600 absolute top-1 right-1">/{board.code}/</div>
               <div className="text-sm text-gray-700">{board.name}</div>
               <div className="text-xs text-gray-500 mt-1">{board.description}</div>
-              <div className="text-xs text-gray-400 absolute top-1 right-1">
-                {board.postCount} posts
-                {board.isNSFW && <span className="text-red-500 ml-2">[NSFW]</span>}
-              </div>
             </Link>
           ))}
         </div>
