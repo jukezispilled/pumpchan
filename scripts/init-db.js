@@ -74,14 +74,6 @@ const boards = [
   },
   {
     code: 'j',
-    name: 'FUD',
-    description: 'Fear, Uncertainty, Doubt',
-    isNSFW: false,
-    maxFileSize: 5 * 1024 * 1024,
-    allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
-  },
-  {
-    code: 'k',
     name: 'NFTs',
     description: 'Non-Fungible Tek',
     isNSFW: false,
@@ -89,15 +81,7 @@ const boards = [
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
   },
   {
-    code: 'l',
-    name: 'Jeets',
-    description: 'Always Selling',
-    isNSFW: false,
-    maxFileSize: 5 * 1024 * 1024,
-    allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
-  },
-  {
-    code: 'm',
+    code: 'k',
     name: 'Tech',
     description: 'Gud Tek',
     isNSFW: false,
@@ -105,7 +89,7 @@ const boards = [
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
   },
   {
-    code: 'n',
+    code: 'l',
     name: 'Confessions',
     description: 'Confess Anything',
     isNSFW: false,
@@ -113,17 +97,9 @@ const boards = [
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
   },
   {
-    code: 'o',
+    code: 'm',
     name: 'Unemployment',
     description: 'That One Unemployed Friend',
-    isNSFW: false,
-    maxFileSize: 5 * 1024 * 1024,
-    allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
-  },
-  {
-    code: 'p',
-    name: 'gm',
-    description: 'say it back',
     isNSFW: false,
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
