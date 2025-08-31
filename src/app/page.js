@@ -2,8 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getAllBoards, getAllThreads } from '@/lib/db-operations';
 import AddressDisplay from './components/Copy';
-import InfoModal from './components/InfoModal';
-import Marquee from 'react-fast-marquee';
+import Marq from './components/Marq';
 
 // Force dynamic rendering to ensure fresh data
 export const dynamic = 'force-dynamic';
@@ -33,6 +32,9 @@ export default async function HomePage() {
 
   return (
     <div className="max-w-4xl mx-auto p-4 mt-6 md:mt-8 min-h-screen flex flex-col">
+      <div className='w-screen absolute top-0 inset-0'>
+        <Marq />
+      </div>
       {/* Top left area with X link and contract address */}
       <div className="flex justify-between items-start mb-4 absolute top-5 right-1">
         <div className="flex items-center gap-1">
