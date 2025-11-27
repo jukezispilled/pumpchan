@@ -162,7 +162,7 @@ export default async function HomePage() {
       </div>
 
       <div className='text-[10px] text-[#006644] text-center mt-auto pt-4'>
-        Copyright © 4bonk 2025.
+        Copyright © pumpchan 2025.
       </div>
     </div>
   );
