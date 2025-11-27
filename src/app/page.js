@@ -40,7 +40,7 @@ export default async function HomePage() {
             href="https://x.com/pumpchanwtf"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black font-semibold text-base mt-0"
+            className="text-[#890000] font-semibold text-base mt-0"
           >
             𝕏
           </Link>
