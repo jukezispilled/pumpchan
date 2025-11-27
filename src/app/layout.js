@@ -3,7 +3,7 @@ import BodyWrapper from './components/BodyWrapper'
 import Marquee from "react-fast-marquee"
 
 export const metadata = {
-  title: "4pump",
+  title: "pumpchan",
   description: "forum of the trenches",
 }
 
