@@ -28,7 +28,7 @@ export default async function HomePage() {
     .slice(0, 6); // Take top 6
   
   // Example contract address - replace with your actual contract address
-  const contractAddress = "pumpcoin";
+  const contractAddress = "6Sx9HaU7NSueSmyjEokGRj2rQeYBxpJx9pQQHujjpump";
 
   return (
     <div className="max-w-4xl mx-auto p-4 mt-6 md:mt-8 min-h-screen flex flex-col">
