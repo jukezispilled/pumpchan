@@ -52,10 +52,10 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
 .custom-gradient {
   background-image: linear-gradient(
     to bottom,
-    #FEDCB8 0%,
-    #FEDCB8 10%,
-    #FFF9E7 25%,
-    #FFFFF0 100%
+    #A3FFD4 0%,    /* light mint */
+    #8AFFC6 10%,   /* pump fun neon mint */
+    #E6FFF3 25%,   /* ultra-soft mint */
+    #F5FFFB 100%   /* near-white mint */
   );
 }
 

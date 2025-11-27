@@ -28,21 +28,19 @@ export default async function HomePage() {
     .slice(0, 6); // Take top 6
   
   // Example contract address - replace with your actual contract address
-  const contractAddress = "dogbonk";
+  const contractAddress = "pumpcoin";
 
   return (
     <div className="max-w-4xl mx-auto p-4 mt-6 md:mt-8 min-h-screen flex flex-col">
-      <div className='w-screen absolute top-0 inset-0'>
-        <Marq />
-      </div>
-      {/* Top left area with X link and contract address */}
-      <div className="flex justify-between items-start mb-4 absolute top-5 right-1">
+
+      {/* Top left area */}
+      <div className="flex justify-between items-start mb-4 absolute top-1 right-1">
         <div className="flex items-center gap-1">
           <Link
-            href="https://x.com/4bonkorg"
+            href="https://x.com/4try4pump"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#890000] font-semibold text-base mt-0"
+            className="text-black font-semibold text-base mt-0"
           >
             𝕏
           </Link>
@@ -52,47 +50,43 @@ export default async function HomePage() {
 
       <div className="text-center mb-4">
         <Image 
-          src="/head.png" 
-          alt="Logo" 
-          width={400} 
+          src="/head.png"
+          alt="Logo"
+          width={400}
           height={200}
           className="mx-auto mb-2 mt-4 md:mt-0"
-          style={{
-            width: '35%',
-            height: 'auto',
-          }}
+          style={{ width: '35%', height: 'auto' }}
           priority
         />
       </div>
 
-      <div className='flex justify-center mb-[3%]'>
-        <video autoPlay loop muted src="/gif.mp4" className='size-[50%] border' />
-      </div>
-
-      <div className="bg-[#fff0c5] border-1 border-orange-700 h-min">
-        <div className='bg-[#f0cb5c]'>
-          <h2 className="text-lg font-bold mb-2 text-[#890000] px-2">Boards</h2>
+      {/* Boards */}
+      <div className="bg-[#E6FFF3] border border-[#004d33] h-min">
+        <div className='bg-[#7CFFB2] border-b border-[#004d33]'>
+          <h2 className="text-lg font-bold mb-2 text-[#006644] px-2">Boards</h2>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 p-4">
           {boards.map((board) => (
             <Link
               key={board.code}
               href={`/${board.code}`}
-              className="block p-1 border-1 border-orange-700 relative"
+              className="block p-1 border border-[#004d33] relative bg-white"
             >
-              <div className="font-bold text-blue-600 absolute top-1 right-1">/{board.code}/</div>
-              <div className="text-sm font-bold text-gray-700">{board.name}</div>
+              <div className="font-bold text-[#00AA66] absolute top-1 right-1">/{board.code}/</div>
+              <div className="text-sm font-bold text-[#004d33]">{board.name}</div>
               <div className="text-xs text-gray-500 mt-1">{board.description}</div>
             </Link>
           ))}
         </div>
       </div>
 
-      {/* Popular Threads section */}
-      <div className="bg-[#fff0c5] border-1 border-orange-700 h-min mt-4">
-        <div className='bg-[#f0cb5c]'>
-          <h2 className="text-lg font-bold mb-2 text-[#890000] px-2">Popular Threads</h2>
+      {/* Popular Threads */}
+      <div className="bg-[#E6FFF3] border border-[#004d33] h-min mt-4">
+        <div className='bg-[#7CFFB2] border-b border-[#004d33]'>
+          <h2 className="text-lg font-bold mb-2 text-[#006644] px-2">Popular Threads</h2>
         </div>
+
         <div className="p-4">
           {popularThreads.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -100,37 +94,36 @@ export default async function HomePage() {
                 <Link
                   key={thread.id || `thread-${index}`}
                   href={`/${thread.boardCode}/thread/${thread.threadNumber || thread.id || index}`}
-                  className="block bg-white border border-gray-300 overflow-hidden relative p-1"
+                  className="block bg-white border border-[#004d33] overflow-hidden relative p-1"
                 >
-                  {/* Board name overlay */}
                   <div className="text-center">
-                    <span className="px-3 py-2 rounded text-sm font-semibold">
+                    <span className="px-3 py-2 rounded text-sm font-semibold text-[#004d33]">
                       {boardMap[thread.boardCode] || thread.boardCode}
                     </span>
                   </div>
-                  
-                  {/* Thread image */}
+
                   <div className="aspect-video bg-white p-2 overflow-hidden relative">
                     <img 
-                      src={thread.imageUrl} 
+                      src={thread.imageUrl}
                       alt={thread.subject || 'Thread image'}
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  
-                  {/* Thread info */}
+
                   <div className="p-3">
-                    <div className="font-semibold text-sm text-gray-800 mb-1 line-clamp-2">
+                    <div className="font-semibold text-sm text-[#004d33] mb-1 line-clamp-2">
                       {thread.subject || 'No Subject'}
                     </div>
                     <div className="text-xs text-gray-600 mb-6 line-clamp-3">
                       {thread.content?.substring(0, 100)}
                       {thread.content?.length > 100 && '...'}
                     </div>
+
                     <div className="flex justify-between items-center text-xs text-gray-500 absolute bottom-2 right-2">
                       <span>/{thread.boardCode}/</span>
                       <span>{thread.replies || 0} replies</span>
                     </div>
+
                     <div className="text-xs text-gray-400 mt-1 absolute bottom-2 left-2">
                       {thread.createdAt && new Date(thread.createdAt).toLocaleDateString()}
                     </div>
@@ -139,7 +132,7 @@ export default async function HomePage() {
               ))}
             </div>
           ) : (
-            <div className="bg-white border-1 border-orange-700 p-6 text-center">
+            <div className="bg-white border border-[#004d33] p-6 text-center">
               <div className="text-lg font-semibold text-gray-500 mb-2">No Popular Threads</div>
               <div className="text-sm text-gray-400">No threads with images found yet</div>
             </div>
@@ -147,27 +140,29 @@ export default async function HomePage() {
         </div>
       </div>
 
-      {/* Stats area with same style as boards */}
-      <div className="bg-[#fff0c5] border-1 border-orange-700 h-min mt-4">
-        <div className='bg-[#f0cb5c]'>
-          <h2 className="text-lg font-bold mb-2 text-[#890000] px-2">Stats</h2>
+      {/* Stats */}
+      <div className="bg-[#E6FFF3] border border-[#004d33] h-min mt-4">
+        <div className='bg-[#7CFFB2] border-b border-[#004d33]'>
+          <h2 className="text-lg font-bold mb-2 text-[#006644] px-2">Stats</h2>
         </div>
+
         <div className="p-4">
           <div className="grid grid-cols-2 gap-4">
-            <div className="border-1 border-orange-700 p-4 text-center">
-              <div className="text-2xl font-bold text-[#890000]">{boards.length}</div>
+            <div className="border border-[#004d33] p-4 text-center bg-white">
+              <div className="text-2xl font-bold text-[#006644]">{boards.length}</div>
               <div className="text-sm text-gray-600">Total Boards</div>
             </div>
-            <div className="border-1 border-orange-700 p-4 text-center">
-              <div className="text-2xl font-bold text-[#890000]">{totalPosts.toLocaleString()}</div>
+
+            <div className="border border-[#004d33] p-4 text-center bg-white">
+              <div className="text-2xl font-bold text-[#006644]">{totalPosts.toLocaleString()}</div>
               <div className="text-sm text-gray-600">Total Posts</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className='text-[10px] text-[#890000] text-center mt-auto pt-4'>
-        Copyright © 4bonk 2025. All rights reserved.
+      <div className='text-[10px] text-[#006644] text-center mt-auto pt-4'>
+        Copyright © 4bonk 2025.
       </div>
     </div>
   );

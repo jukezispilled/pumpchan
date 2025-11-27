@@ -10,8 +10,8 @@ import { createBoard } from '../src/lib/db-operations.js';
 const boards = [
   {
     code: 'a',
-    name: 'Bonk',
-    description: 'Bonk Chat',
+    name: 'Wojak',
+    description: 'Wojak Mode',
     isNSFW: false,
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
@@ -26,16 +26,16 @@ const boards = [
   },
   {
     code: 'c',
-    name: 'Useless',
-    description: 'Useless Board',
+    name: 'Memes',
+    description: 'Dank Memes',
     isNSFW: false,
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
   },
   {
     code: 'd',
-    name: 'Memes',
-    description: 'Meme Share',
+    name: 'Chads',
+    description: 'Chads Only',
     isNSFW: false,
     maxFileSize: 5 * 1024 * 1024,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/gif', 'image/webp']
